@@ -35,6 +35,7 @@ nav {
 
 nav a.nav-link {
   font-size: .8rem;
+  font-weight: 900;
   letter-spacing: 0.0375rem;
   cursor: pointer;
 }
@@ -99,27 +100,12 @@ nav ul li {
   text-transform: uppercase;
 }
 
-
-/********** TYPED TEXT ***********/
-
-.typed-text {
-  font-size: 2rem;
-  color: var(--primary-white);
-}
-
 @media(max-width: 768px) {
   .main-info h1{
     font-size: 1.7rem !important;
+    
   }
 }
-
-@media(max-width: 768px) {
-  .typed-text {
-    font-size: 1.3rem !important;
-  }
-}
-
-
 
 /********** HEADER MAIN BUTTON ***********/
 
@@ -128,7 +114,7 @@ nav ul li {
   text-transform: uppercase;
   border-radius: 0;
   padding: 0.625rem 0.75rem 0.75rem 0.75rem;
-  color: var(--primary-white);
+  color: var(--primary-blue);
   margin: 2rem;
 }
 
@@ -137,20 +123,4 @@ nav ul li {
   background-color: var(--primary-hover-yellow);
   color: var(--primary-blue);
   transition: .2s ease-in-out;
-}
-
-
-/********** PARTICLES JS ***********/
-
-.tsparticles-canvas-el {
-  position: absolute;
-  height: 100vh ;
-  width: 100vw;
-  z-index: 1;
-}
-
-@media(max-width: 768px) {
-  .particles-canvas {
-    display: none;
-  }
 }
