@@ -74,7 +74,7 @@ nav ul li {
 /**************************** HEADER **********************/
 .header-wraper {
   position: relative;
-  background: url(background.jpg) no-repeat;
+  background: url(images/background.jpg) no-repeat;
   background-size: cover;
   background-position: center;
   height: 90vh;
@@ -123,4 +123,40 @@ nav ul li {
   background-color: var(--primary-hover-yellow);
   color: var(--primary-blue);
   transition: .2s ease-in-out;
+}
+
+/***************** BOOKS ***************/
+.books-wraper {
+  /* position: relative; */
+  background: var(--primary-yellow);
+  background-size: cover;
+  background-position: center;
+  height: 90vh;
+}
+
+.main-info {
+  display: flex;
+  position: absolute;
+  top:0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  font-family: 'Roboto Condensed', sans-serif;
+  z-index: 1;
+}
+
+.main-info h1 {
+  color: var(--primary-blue);
+  text-transform: uppercase;
+}
+
+@media(max-width: 768px) {
+  .main-info h1{
+    font-size: 1.7rem !important;
+    
+  }
 }

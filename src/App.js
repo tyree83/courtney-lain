@@ -1,25 +1,18 @@
-import React from 'react';
+import React, { Component } from 'react';
+// import { HashLink as Link } from 'react-router-hash-link';
+
 import './App.css';
 import "bootstrap/dist/css/bootstrap.min.css"
-import Navbar from "./components/Navbar"
-import Header from "./components/Header"
-import Books from "./components/Books"
-import Artwork from "./components/Artwork"
-import AboutMe from "./components/AboutMe"
-import Bookings from "./components/Bookings"
 
-
-function App() {
-  return (
-  <>
-  <Navbar />
-  <Header />
-  <Books />
-  <Artwork />
-  <AboutMe />
-  <Bookings />
-  </>
-  );
+class App extends Component {
+  render(){
+    return (
+    <div className="App">
+    <h1>Home Page</h1>
+    {console.log(this.props)}
+    </div>
+    );
+  }
 }
 
 export default App;

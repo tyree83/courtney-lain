@@ -1,6 +1,6 @@
 import React from 'react';
 
-export default function ArtWork() {
+export default function Artwork() {
   return(
     <div>
       <h1>Bookings and Events</h1>

@@ -1,5 +1,13 @@
-import React from "react";
-import logo from "../logo2.png";
+import React from 'react';
+import { BrowserRouter as Router, Route, Link } from 'react-router-dom';
+
+import App from '../App';
+import Books from './Books';
+import Artwork from './Artwork';
+import AboutMe from './AboutMe';
+import Bookings from './Bookings';
+
+import logo from "../images/logo2.png";
 //REACT FONT AWESOME IMPORTS
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faBars } from "@fortawesome/free-solid-svg-icons";
@@ -7,6 +15,7 @@ import { faBars } from "@fortawesome/free-solid-svg-icons";
 
 const Navbar = () => {
   return (
+    <Router>
     <nav className="navbar navbar-expand-lg navbar-light bg-dark">
       <div className="container">
 
@@ -18,24 +27,33 @@ const Navbar = () => {
         <div className="collapse navbar-collapse" id="navbarSupportedContent">
           <ul className="navbar-nav">
             <li className="nav-item active">
-              <a className="nav-link" href="/#">Home <span className="sr-only">(current)</span></a>
+              <a className="nav-link" href="/#"><Link to="">Home</Link> 
+              <span className="sr-only">(current)</span></a>
             </li>
             <li className="nav-item">
-              <a className="nav-link" href="/#">Books</a>
+              <a className="nav-link" href="/#"><Link to="">Books</Link></a>
             </li>
             <li className="nav-item">
-              <a className="nav-link" href="/#">Artwork</a>
+              <a className="nav-link" href="/#"><Link to="">Artwork</Link></a>
             </li>
             <li className="nav-item">
-              <a className="nav-link" href="/#">About Me</a>
+              <a className="nav-link" href="/#"><Link to="">About Me</Link></a>
             </li>
             <li className="nav-item">
-              <a className="nav-link" href="/#">Bookings & Events</a>
+              <a className="nav-link" href="/#"><Link to="">Bookings & Events</Link></a>
             </li>
           </ul> 
+
+            <Route exact path="/" component={App} />
+            <Route exact path="/books" component={Books} />
+            <Route exact path="/artwork" component={Artwork} />
+            <Route exact path="/aboutMe" component={AboutMe} />
+            <Route exact path="bookings" component={Bookings} />
+
         </div>
       </div>
     </nav>
+    </Router>
   )
 }
 
